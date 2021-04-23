@@ -39,7 +39,7 @@ namespace PersistentMemoryCache.Tests
             
             var result = cache.Get<List<string>>(key);
             result.Should().NotBeNull();
-            result.ShouldBeEquivalentTo(value);
+            result.Should().BeEquivalentTo(value);
         }
 
         [Fact]
@@ -55,7 +55,7 @@ namespace PersistentMemoryCache.Tests
 
             var result = cache.Get<List<string>>(key);
             result.Should().NotBeNull();
-            result.ShouldBeEquivalentTo(value);
+            result.Should().BeEquivalentTo(value);
         }
 
         [Fact]
@@ -71,7 +71,7 @@ namespace PersistentMemoryCache.Tests
 
             var result = cache.Get(key);
             result.Should().NotBeNull();
-            result.ShouldBeEquivalentTo(value);
+            result.Should().BeEquivalentTo(value);
         }
 
         public class Customer

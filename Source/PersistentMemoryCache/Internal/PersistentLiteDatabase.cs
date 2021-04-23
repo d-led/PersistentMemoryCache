@@ -1,6 +1,7 @@
 ﻿using System;
 using LiteDB;
 using System.IO;
+using LiteDB.Engine;
 
 namespace PersistentMemoryCache.Internal
 {
@@ -39,7 +40,7 @@ namespace PersistentMemoryCache.Internal
         /// <summary>
         /// Starts LiteDB database using full parameters
         /// </summary>
-        internal PersistentLiteDatabase(IDiskService diskService, BsonMapper mapper = null) : base(diskService, mapper)
+        internal PersistentLiteDatabase(ILiteEngine iLiteEngine, BsonMapper mapper = null) : base(iLiteEngine, mapper)
         {
 
         }
