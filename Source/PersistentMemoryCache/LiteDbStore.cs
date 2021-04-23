@@ -12,7 +12,7 @@ namespace PersistentMemoryCache
 
         public LiteDbStore(LiteDbOptions options)
         {
-            _ConnectionString = $"filename={options.FileName};upgrade=true";
+            _ConnectionString = $"filename={options.FileName};upgrade=true;connection=shared";
             using (var db = new PersistentLiteDatabase(_ConnectionString))
             {
                 var collection = db.GetCollection<Internal.LiteDbCacheEntry>(_CollectionName);
